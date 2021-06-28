@@ -1,0 +1,66 @@
+.top {
+
+    background-color: #0A1B4C;
+
+    &__content {
+        padding: 13px 0 7px;
+        display: flex;
+        justify-content: space-between;
+        color: $grey;
+        
+    }
+
+    &__text {
+    }
+
+    &__info {
+        color: #fff;
+    }
+
+    &__support {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        max-width: 310px;
+        width: 100%;
+    }
+
+    &__mail {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: -30px;
+            width: 1px;
+            height: 20px;
+            background-color: rgba(#F3F4F8, 0.2);       
+        }
+    }
+
+    &__mail-icon {
+        margin-right: 10px;
+    }
+
+    &__social {
+        display: flex;
+    }
+
+    &__icon {
+        &:not(:last-child) {
+            margin-right: 13px;
+        }
+    }
+
+    &__link {
+        color: $grey;
+        fill: $grey;
+        transition: fill 0.3s;
+
+        &:hover {
+            fill: #fff;
+        }
+    }
+}

@@ -9,6 +9,7 @@ body {
     font-family: "Hind", sans-serif;
     font-weight: 400;
     font-size: 16px;
+    line-height: 1;
     background-color: #fff;
     color: $main;
 }
@@ -17,8 +18,15 @@ main {
     flex-grow: 1;
 }
 
+button {
+    border: none;
+    background-color: $accent;
+    color: #fff;
+}
+
 .container {
     max-width: 1200px;
+    width: 100%;
     padding: 0 15px;
     margin: 0 auto;
 }
