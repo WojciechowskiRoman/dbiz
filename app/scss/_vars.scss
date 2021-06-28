@@ -1,0 +1,13 @@
+$accent: #F84E77;
+$main : #0D1E50;
+$green: #16706A;
+$grey: #BBBBBF;
+
+
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+  }
+  
+  @function min($numbers...) {
+    @return m#{a}x(#{$numbers});
+  }
