@@ -1,0 +1,141 @@
+.study {
+
+    padding: 120px 0;
+    background-color: #040E2A;
+
+    &__top {
+        margin-bottom: 65px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 1.1;
+        color: #fff;
+    }
+
+    &__subtitle {
+        margin-bottom: 20px;
+    }
+
+    &__list {
+        margin: 0 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        position: relative;
+        flex: 0 1 20%;
+        height: 500px;
+        background-blend-mode: luminosity;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden;
+
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+
+        &--management {
+            background-image: url('../images/study/1.jpg'), linear-gradient(#040E2A, #040E2A);
+        }
+
+        &--analytics {
+            background-image: url('../images/study/2.jpg'), linear-gradient(#040E2A, #040E2A);
+        }
+
+        &--ux {
+            background-image: url('../images/study/3.jpg'), linear-gradient(#040E2A, #040E2A);
+        }
+
+        &--business {
+            background-image: url('../images/study/4.jpg'), linear-gradient(#040E2A, #040E2A);
+        }
+
+        &--design {
+            background-image: url('../images/study/5.jpg'), linear-gradient(#040E2A, #040E2A);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            background-image: url('../images/study/overlay.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: opacity 0.5s;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -32px;
+            width: 100%;
+            height: 189px;
+            background-image: url('../images/study/hover.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        &:hover {
+            background-blend-mode: normal;
+
+            &::after {
+                opacity: 0;
+            }
+
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+    }
+
+    &__img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        
+    }
+
+    &__content {
+        padding: 0 69px 41px 39px;
+        position: absolute;
+        bottom: 0;
+        color: #fff;
+        z-index: 1;
+    }
+
+    &__name {
+        margin-bottom: 15px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &__descr {
+        font-size: 24px;
+        font-weight: 700;
+    }
+}

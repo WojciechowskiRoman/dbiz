@@ -22,18 +22,6 @@
         margin-bottom: 20px;
     }
 
-    &__more {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 160px;
-        height: 44px;
-        text-align: center;
-        border: 2px solid $accent;
-        color: $accent;
-        font-weight: 500;
-    }
-
     &__list {
         display: flex;
     }
