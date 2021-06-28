@@ -56,9 +56,8 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        min-height: 830px;
+        min-height: 77vh;
         height: 1px;
-        // height: 76vh;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -81,7 +80,6 @@
     }
 
     &__content {
-        margin-bottom: 21px;
         display: flex;
         flex-direction: column;
         justify-content: center;

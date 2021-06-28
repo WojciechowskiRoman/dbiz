@@ -1,0 +1,124 @@
+.features {
+
+    padding: 114px 0 80px;
+
+    &__top {
+        margin-bottom: 57px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        max-width: 484px;
+        font-size: 50px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        line-height: 1.1;
+    }
+
+    &__subtitle {
+        margin-bottom: 20px;
+        color: $accent;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0;
+    }
+
+    &__more {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 160px;
+        height: 44px;
+        text-align: center;
+        border: 2px solid $accent;
+        color: $accent;
+        font-weight: 500;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 321px;
+        flex: 0 1 25%;
+        border: 1px solid #e9eaf0;
+        border-left: none;
+        border-bottom: none;
+
+        &:not(:first-child) {
+            padding-left: 30px;
+        }
+    }
+
+    &__name {
+        position: relative;
+        max-width: 179px;
+        font-weight: 600;
+        font-size: 24px;
+        
+        &::before {
+            position: absolute;
+            content: '';
+            top: -36px;
+            transform: translateY(-100%);        
+            background-repeat: no-repeat;
+        }
+
+        &--development {
+            &::before {
+                background-image: url('../images/features/website.jpg');
+                width: 54px;
+                height: 50px;
+            }
+        }
+
+        &--finance {
+            &::before {
+                background-image: url('../images/features/save.jpg');
+                width: 56px;
+                height: 64px;
+            }
+        }
+
+        &--audit {
+            &::before {
+                background-image: url('../images/features/web.jpg');
+                width: 56px;
+                height: 56px;
+            }
+        }
+
+        &--design {
+            &::before {
+                background-image: url('../images/features/design.jpg');
+                width: 51px;
+                height: 64px;
+            }
+        }
+    }
+
+    &__link {
+        margin: 56px 0 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid #e9eaf0;   
+        transition: background-color 0.3s, fill 0.3s; 
+        
+        &:hover {
+            background-color: $accent;
+            fill: #fff;
+        }
+    }
+}
