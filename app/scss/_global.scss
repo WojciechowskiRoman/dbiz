@@ -34,6 +34,13 @@ main {
     margin: 0 auto;
 }
 
+.logo {
+    &__footer {
+        margin-bottom: 15px;
+        display: block;
+    }
+}
+
 .title {
     display: flex;
     flex-direction: column;
@@ -59,6 +66,34 @@ main {
     border: 2px solid $accent;
     color: $accent;
     font-weight: 500;
+}
+
+.social {
+    display: flex;
+
+    &__item {
+        display: flex;
+        transition: background-color 0.3s;
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        &:hover {
+            background-color: #fff;
+
+            .social__icon {
+                fill: $accent;
+            }
+        }
+    }
+
+    &__icon {
+        padding: 9px 10px;
+        border: 2px solid rgba(#fff, 0.1);
+        fill: #fff;
+        transition: fill 0.3s;
+    }
 }
 
 .arrow {
