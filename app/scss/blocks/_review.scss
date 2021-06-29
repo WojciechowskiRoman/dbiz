@@ -1,0 +1,116 @@
+.review {
+
+    padding-bottom: 120px;
+
+    &__title {
+        margin: 0 auto 59px;
+        text-align: center;
+        max-width: 580px;
+    }
+
+    &__subtitle {
+        margin-bottom: 25px;
+    }
+
+    &__list {
+        display: flex;
+        height: 400px;
+    }
+
+    &__item {
+        margin: 0 15px;
+        position: relative;
+        height: 340px;
+        border: 2px solid #EFF0F4;
+        width: 370px;
+        box-shadow: unset;
+        transition: box-shadow 0.5s, border 0.5s;
+
+        &::before {
+            position: absolute;
+            content: '';
+            background-image: url('../images/review/review.svg');
+            background-repeat: no-repeat;
+            width: 55px;
+            height: 30px;
+            right: 38px;
+            transition: background-image 0.5s;
+        }
+    }
+
+    &__content {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__preview {
+        margin-bottom: 12px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    &__text {
+        margin-bottom: 28px;
+        line-height: 1.7;
+        font-size: 18px;
+        width: 292px;
+    }
+
+    &__author {
+        display: flex;
+    }
+
+    &__img {
+        margin-right: 14px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    &__author-about {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__name {
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    &__position {
+        color: #7C7E84;
+    }
+
+    &__item  + .slick-current {
+        border: 2px solid transparent;
+        box-shadow: 0 30px 40px 0 rgba(13, 30, 80, 0.1);
+    
+        &::before {
+            background-image: url('../images/review/review-select.svg');
+        }   
+    }
+
+    .slick-dots {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        button {
+            background-color: #fff;
+            border: 2px solid #d3d5dc;
+        }
+    }
+
+    .slick-active {
+        
+        button {
+            border: 2px solid transparent;
+            background-color: $accent;
+        }
+    }
+}

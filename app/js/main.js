@@ -5,6 +5,17 @@ $(function() {
         fade: true,
     });
 
+    $('.review__list').slick({
+        arrows: false,
+        infinite: true,
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        dots: true,
+        centerMode: true,
+        variableWidth: true,
+        centerPadding: '0',
+    });
+
     $('.award__link').on('click', function(e) {
         e.preventDefault();
         $('.award__link').removeClass('award__link--active');

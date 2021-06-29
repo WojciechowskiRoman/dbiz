@@ -109,6 +109,20 @@
         border: 1px solid rgba(#11ABA0, 0.2);
         color: #fff;
     }
+
+    .slick-dots {
+        display: flex;
+        position: absolute;
+        bottom: 50px;
+        left: 19.5%;
+    }
+    
+    .slick-active {
+        
+        button {
+            background-color: #fff;
+        }
+    }
 }
 
 .menu {
@@ -130,11 +144,7 @@
 }
 
 .slick-dots {
-    display: flex;
-    position: absolute;
-    bottom: 50px;
-    left: 19.5%;
-
+    
     button {
         font-size: 0;
         border-radius: 50%;
@@ -144,12 +154,5 @@
         border: 2px solid rgba(#F3F4F8, 0.3);
         background-color: transparent;  
         transition: background-color 0.5s; 
-    }
-}
-
-.slick-active {
-    
-    button {
-        background-color: #fff;
     }
 }
