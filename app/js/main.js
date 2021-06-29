@@ -10,7 +10,7 @@ $(function() {
         $('.award__link').removeClass('award__link--active');
         $(this).addClass('award__link--active');
 
-        $('.award__item').fadeOut().css('display', 'none');
+        $('.award__item').fadeIn().css('display', 'none');
         $($(this).attr('href')).fadeIn().css('display', 'flex');
     });
 });
