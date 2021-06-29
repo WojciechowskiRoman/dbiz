@@ -1,0 +1,51 @@
+.clients {
+
+    padding-bottom: 114px;
+    
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: $athens;
+        height: 300px;
+    }
+
+    &__title {
+        padding-left: 38px;
+        font-size: 40px;
+    }
+
+    &__subtitle {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 0;
+        color: #54565C;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        height: 157px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 1 33.333%;
+        fill: #70737E;
+        transition: fill 0.3s;
+
+        &:hover {
+            fill: $accent;
+        }
+    }
+}
+.container {
+}
+.title {
+}
+.subtitle {
+}
