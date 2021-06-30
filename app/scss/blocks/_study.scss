@@ -4,30 +4,64 @@
     background-color: #040E2A;
     overflow: hidden;
 
+    @media(max-width: $tablet) {
+        padding: 100px 0 110px;
+    }
+
+    @media(max-width: $tablet) {
+        padding: 80px 0 90px;
+    }
+
+    @media(max-width: $small-phone) {
+        padding: 48px 0 70px;
+    }
+
     &__top {
         margin-bottom: 65px;
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+
+        @media(max-width: $medium) {
+            margin-bottom: 45px;
+            display: block;
+            text-align: center;
+        }
     }
 
     &__title {
         line-height: 1.1;
         color: #fff;
+
+        @media(max-width: $medium) {
+            margin: 0 auto 30px;
+            display: block;
+        }
     }
 
     &__subtitle {
         margin-bottom: 20px;
+
+        @media(max-width: $medium) {
+            display: block;
+        }
     }
 
     &__list {
         margin: 0 30px;
         display: flex;
         justify-content: space-between;
+        
+        
+        @media(max-width: $extra-large) {
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
     }
 
     &__item {
 
+        flex: 0 1 20%;
         animation-delay: calc(0.2s * var(--k));
         transition: box-shadow 0.3s;
 
@@ -77,6 +111,23 @@
 
         &:active {
             box-shadow: 0 0 10px #fff;
+        }
+
+        @media(max-width: $extra-large) {
+            margin-bottom: 50px;
+            flex: 0 1 30%;
+        }
+
+        @media(max-width: $large) {
+            flex: 0 1 46%;
+        }
+
+        @media(max-width: $small-phone) {
+            flex: 0 1 100%;
+
+            &:not(:last-child) {
+                margin-right: 0;
+            }
         }
     }
 }

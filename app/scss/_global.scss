@@ -30,12 +30,12 @@ main {
 
 .container {
     max-width: 1200px;
-    width: 100%;
     padding: 0 15px;
     margin: 0 auto;
 }
 
 .logo {
+    z-index: 3;
     &__footer {
         margin-bottom: 15px;
         display: block;
@@ -48,6 +48,14 @@ main {
     font-weight: 700;
     font-size: 50px;
     letter-spacing: -1px;
+
+    @media(max-width: $medium) {
+        font-size: 45px;
+    }
+
+    @media(max-width: $small-phone) {
+        font-size: 32px;
+    }
 }
 
 .subtitle {
@@ -62,6 +70,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 0;
+    margin-left: auto;
     width: 160px;
     height: 44px;
     text-align: center;
@@ -102,6 +112,11 @@ main {
 
     &:active {
         box-shadow: 0 0 10px $accent;
+    }
+
+    @media(max-width: $small-phone) {
+        width: 130px;
+        height: 40px;
     }
 }
 
@@ -185,4 +200,19 @@ main {
 
 .lock {
     overflow: hidden;
+}
+
+.overflow {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: rgba(0,0,0, 0.5);
+
+    &--active {
+        display: block;
+    }
 }

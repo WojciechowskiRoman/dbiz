@@ -2,11 +2,26 @@
 
     background-color: #0A1B4C;
 
+    &__text {
+        @media(max-width: $medium) {
+            margin-bottom: 10px;
+            text-align: center;
+            line-height: 1.4;
+        }
+    }
+
     &__content {
         padding: 13px 0 7px;
         display: flex;
         justify-content: space-between;
-        color: $grey;     
+        flex-wrap: wrap;
+        color: $grey;   
+        
+        @media(max-width: $medium) {
+            padding: 13px 0;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__info {

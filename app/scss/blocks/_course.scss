@@ -1,13 +1,20 @@
 .course {
 
     position: relative;
-    flex: 0 1 20%;
     height: 500px;
     background-blend-mode: luminosity;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     overflow: hidden;
+
+    @media(max-width: $large) {
+        height: 400px;
+    }
+
+    @media(max-width: $small-phone) {
+        height: 300px;
+    }
 
     &__link {
         position: absolute;
@@ -24,6 +31,18 @@
         bottom: 0;
         color: #fff;
         z-index: 1;
+
+        @media(max-width: $extra-large) {
+            padding: 0 45px 48px 30px;
+        }
+
+        @media(max-width: $tablet) {
+            padding: 0 20px 35px 20px;
+        }
+
+        @media(max-width: $medium) {
+            padding: 0 15px 23px 15px;
+        }
     }
 
     &__name {
@@ -35,5 +54,10 @@
     &__descr {
         font-size: 24px;
         font-weight: 700;
+        line-height: 1.2;
+
+        @media(max-width: $small-phone) {
+            font-size: 22px;
+        }
     }
 }

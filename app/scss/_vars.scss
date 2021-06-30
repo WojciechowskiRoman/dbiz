@@ -4,6 +4,16 @@ $green: #16706A;
 $grey: #BBBBBF;
 $athens: #F0F1F5;
 
+$small-phone: 576px;
+
+$medium: 768px;
+
+$tablet: 1024px;
+
+$large: 1200px;
+
+$extra-large: 1400px;
+
 
 @function max($numbers...) {
     @return m#{a}x(#{$numbers});

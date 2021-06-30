@@ -2,24 +2,52 @@
 
     padding: 114px 0 80px;
 
+    @media(max-width: $tablet) {
+        padding: 90px 0 70px;
+    }
+
+    @media(max-width: $medium) {
+        padding: 60px 0 50px;
+    }
+
+    @media(max-width: $small-phone) {
+        padding: 60px 0 30px;
+    }
+
     &__top {
         margin-bottom: 57px;
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+
+        @media(max-width: $medium) {
+            margin-bottom: 40px;
+            display: block;
+        }
     }
 
     &__title {
         max-width: 484px;
         line-height: 1.1;
+
+        @media(max-width: $medium) {
+            margin: 0 auto 20px;
+            display: block;
+            text-align: center;
+        }
     }
 
     &__subtitle {
         margin-bottom: 20px;
+
+        @media(max-width: $medium) {
+            display: block;
+        }
     }
 
     &__list {
         display: flex;
+        flex-wrap: wrap;
     }
 
     &__item {
@@ -63,7 +91,27 @@
             100% {
                 top: -36px;
             }
-        }     
+        }   
+        
+        @media(max-width: $medium) {
+            flex: 0 1 50%;
+            align-items: center;
+            text-align: center;
+            border-left: 1px solid #e9eaf0;
+            border-bottom: 1px solid #e9eaf0;
+
+            &:not(:first-child) {
+                padding-left: 0;
+            }
+        }
+
+        @media(max-width: $small-phone) {
+            margin: 0 auto 20px;
+            margin-bottom: 20px;
+            flex: 0 1 auto;
+            width: 320px;
+            height: 280px;
+        }
     }
 
     &__name {
@@ -78,6 +126,11 @@
             top: -36px;
             transform: translateY(-100%);        
             background-repeat: no-repeat;
+
+            @media(max-width: $medium) {
+                left: 50%;
+                transform: translate(-50%, -100%);
+            }
         }
 
         &--development {
@@ -132,6 +185,10 @@
 
         &:focus {
             box-shadow: 0 0 10px $accent;
+        }
+
+        @media(max-width: $small-phone) {
+            margin: 30px 0 20px 0;
         }
     }
 }

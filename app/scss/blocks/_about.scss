@@ -3,10 +3,26 @@
     padding: 80px 0 140px;
     overflow: hidden;
 
+    @media(max-width: $tablet) {
+        padding: 60px 0 110px;
+    }
+
+    @media(max-width: $medium) {
+        padding: 50px 0 80px;
+    }
+
+    @media(max-width: $small-phone) {
+        padding: 40px 0 70px;
+    }
+
     &__inner {
         display: flex;
         justify-content: space-between;
         
+        @media(max-width: $tablet) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__img-box {
@@ -14,6 +30,25 @@
         position: relative;
         width: 470px;
         height: 600px;
+
+        @media(max-width: $large) {
+            margin: 0 20px 0 60px;
+        }
+
+        @media(max-width: $tablet) {
+            margin: 0;
+            order: 1;
+        }
+
+        @media(max-width: $medium) {
+            width: 455px;
+            height: 540px;
+        }
+
+        @media(max-width: $small-phone) {
+            width: 300px;
+            height: 431px;
+        }
     }
 
     &__img {
@@ -33,17 +68,51 @@
         transform: translate(-37%, -40%);
         background-color: #704FFC;
         box-shadow: 0px 30px 40px 0px rgba(30, 7, 128, 0.3);
-        color: #fff;      
+        color: #fff;
+        
+        @media(max-width: $large) {
+            padding: 50px 39px;
+            transform: translate(-22%, -40%);
+        }
+
+        @media(max-width: $tablet) {
+            padding: 40px;
+        }
+
+        @media(max-width: $medium) {
+            padding: 30px;
+        }
+
+        @media(max-width: $small-phone) {
+            padding: 15px;
+            transform: translate(0%, -40%);
+        }
     }
 
     &__box-number {
         font-size: 100px;
         font-weight: 500;
+
+        @media(max-width: $tablet) {
+            font-size: 86px;
+        }
+
+        @media(max-width: $medium) {
+            font-size: 75px;
+        }
+
+        @media(max-width: $small-phone) {
+            font-size: 50px;
+        }
     }
 
     &__box-text {
         font-size: 20px;
         max-width: 104px;
+
+        @media(max-width: $small-phone) {
+            font-size: 18px;
+        }
     }
 
     &__content {
@@ -51,6 +120,12 @@
         display: flex;
         flex-direction: column;
         max-width: 463px;
+
+        @media(max-width: $tablet) {
+            margin: 0 0 50px 0;
+            max-width: 100%;
+            text-align: center;
+        }
     }
 
     &__title {
@@ -65,18 +140,35 @@
         margin-bottom: 50px;
         font-size: 24px;
         font-weight: 500;
+
+        @media(max-width: $small-phone) {
+            margin-bottom: 35px;
+        }
     }
 
     &__list {
         margin-bottom: 64px;
         display: flex;
         justify-content: space-between;
+
+        @media(max-width: $small-phone) {
+            margin-bottom: 49px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     &__item {
         display: flex;
         flex-direction: column;
         max-width: 192px;
+
+        @media(max-width: $small-phone) {
+            &:first-child {
+                margin-bottom: 20px;
+            }
+        }
     }
 
     &__number {
@@ -85,6 +177,10 @@
         font-size: 50px;
         font-weight: 700;
         color: $green;
+
+        @media(max-width: $small-phone) {
+            font-size: 38px;
+        }
     }
 
     &__info {
@@ -98,6 +194,10 @@
         position: relative;
         overflow: hidden;
         transition: color 0.3s, border 0.3s, box-shadow 0.3s, border-radius 0.3s;
+
+        @media(max-width: $small-phone) {
+            width: 180px;
+        }
 
         &::before {
             position: absolute;
@@ -114,6 +214,16 @@
         span {
             position: absolute;
             z-index: 1;
+
+            @media(max-width: $tablet) {
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
         }
 
         &:hover {
@@ -136,6 +246,11 @@
 
         &:focus {
             box-shadow: 0 0 10px $accent;
+        }
+
+        @media(max-width: $tablet) {
+            margin: 0 auto;
+            display: block;
         }
     }
 }

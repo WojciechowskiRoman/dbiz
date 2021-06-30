@@ -1,5 +1,8 @@
 .header {
 
+    z-index: 50;
+    background-color: #fff;
+
     &__inner {
         padding: 11px 0 13px;
         display: flex;
@@ -12,6 +15,10 @@
         align-items: center;
         max-width: 538px;
         width: 100%;
+
+        @media(max-width: $medium) {
+            max-width: 88px;
+        }
     }
 
     &__form {
@@ -23,6 +30,10 @@
             .header__search-icon {
                 fill: $accent;
             }
+        }
+
+        @media(max-width: $small-phone) {
+            display: none;
         }
     }
 
@@ -57,6 +68,10 @@
                 color: $accent;
             }
         }
+
+        @media(max-width: $tablet) {
+            margin-right: 25px;
+        }
     }
 
     &__button {
@@ -65,6 +80,27 @@
         height: 44px;
         overflow: hidden;
         transition: font-weight 0.3s, box-shadow 0.3s;
+
+        @media(max-width: $tablet) {
+            width: 100px;
+        }
+        
+        span {
+            position: absolute;
+            z-index: 1;
+            transition: opacity 0.3s, transform 0.3s;
+
+            &:nth-child(1) {
+                opacity: 1;
+                transition-delay: 0.3s;
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+                transform: scale(3);
+                transition-delay: 0s;
+            }
+        }
 
         &::before, &:after {
             content: '';
@@ -112,23 +148,6 @@
         &:focus {
             box-shadow: 0 0 10px $accent;
         }
-
-        span {
-            position: absolute;
-            z-index: 1;
-            transition: opacity 0.3s, transform 0.3s;
-
-            &:nth-child(1) {
-                opacity: 1;
-                transition-delay: 0.3s;
-            }
-
-            &:nth-child(2) {
-                opacity: 0;
-                transform: scale(3);
-                transition-delay: 0s;
-            }
-        }
     }
 
     &__item {
@@ -155,6 +174,10 @@
             background-image: url('/images/header/bg.svg');
             z-index: -1;
         }
+
+        @media(max-width: $small-phone) {
+            min-height: 69vh;
+        }
     }
 
     &__content {
@@ -163,20 +186,46 @@
         justify-content: center;
         position: relative;
         height: 100%;
+
+        @media(max-width: $tablet) {
+            align-items: center;
+            text-align: center;
+        }
     }
 
     &__title { 
         margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
         max-width: 592px;
         font-weight: 700;
         font-size: 80px;
         letter-spacing: -2px;
+
+        @media(max-width: $tablet) {
+            max-width: 551px;
+            font-size: 70px;
+        }
+
+        @media(max-width: $tablet) {
+            max-width: 486px;
+            font-size: 60px;
+        }
+
+        @media(max-width: $small-phone) {
+            max-width: 400px;
+            font-size: 40px;
+        }
     }
     
     &__subtitle {
         margin-bottom: 50px;
         max-width: 535px;
         line-height: 1.5;
+
+        @media(max-width: $small-phone) {
+            margin-bottom: 15px;
+        }
     }
 
     &__link {
@@ -221,15 +270,79 @@
         }
     }
 
-    .slick-dots {
-        display: flex;
-        position: absolute;
-        bottom: 50px;
-        left: 19.5%;
+    &__burger {
+        margin-left: 20px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        z-index: 3;
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
+
+        &--active {
+            .header__burger-btn {
+                background-color:  transparent;
+                transform: translateX(-50px);
+
+                &::before {
+                    transform: rotate(45deg) translate(32px, -37px);
+                }
+
+                &::after {
+                    transform: rotate(-45deg) translate(37px, 32px);
+                }
+            }
+        }
+
+        @media(max-width: $medium) {
+            display: flex;
+        }
+    }
+
+    &__burger-btn {
+        position: relative;
+        display: block;
+        width: 40px;
+        height: 4px;
+        background-color: #000;
+        border-radius: 10px;
+        transition: transform 0.5s ease-in-out, background-color 0.5s;
+
+        &::before, &::after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            background-color: #000;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        &::before {
+            transform: translateY(-12px);
+        }
+
+        &::after {
+            transform: translateY(12px);
+        }
     }
 
     .slick-dots {
     
+        display: flex;
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @media(max-width: $small-phone) {      
+            bottom: 18px;
+        }
+
         button {
             transition: background-color 0.3s;
 
@@ -251,11 +364,40 @@
 
     &__list {
         display: flex;
+
+        @media(max-width: $medium) {
+            padding: 20px 0;
+            position: absolute;
+            top: 157px;
+            left: 0;
+            right: 0;
+            display: block;
+            width: 100%;
+            text-align: center;
+            background-color: #fff;
+            z-index: 2;
+            transform: translateY(-200%);
+            transition: transform 0.3s;
+
+            &--active {
+                transform: translateY(0);
+            }
+        }
     }
 
     &__item {
+        margin-right: 10px;
+
         &:not(:last-child) {
             margin-right: 35px;
+        }
+
+        @media(max-width: $medium) {
+            margin-right: 0;
+
+            &:not(:last-child) {
+                margin-right: 0;
+            }
         }
     }
 
@@ -273,6 +415,14 @@
             background-color: $accent;
             width: 0;
             transition: width 0.3s, background-color 0.3s;
+
+            @media(max-width: $medium) {
+                bottom: 0;
+            }
+        }
+
+        @media(max-width: $medium) {
+            font-size: 24px;
         }
 
         &::before {
@@ -299,6 +449,11 @@
 
         &:focus {
             outline-color: $accent;
+        }
+
+        @media(max-width: $tablet) {
+            padding: 15px 0;
+            display: block;
         }
     }
 }

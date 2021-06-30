@@ -14,7 +14,7 @@
     <div class="top">
         <div class="container">
             <div class="top__content">
-                <span>
+                <span class="top__text">
                     Hi, we're hiring, please send your details <a class="top__info" href="#">click here</a>
                 </span>
                 <div class="top__support">
@@ -90,10 +90,13 @@
                     </svg>
                     <input class="header__input" type="text" placeholder="Search...">
                     <button class="header__button button" type="submit">
-                       <span>Get Started</span>
-                       <span>Get Started</span>
+                        <span>Get Started</span>
+                        <span>Get Started</span>
                     </button>
                 </form>
+                <div class="header__burger">
+                    <span class="header__burger-btn"></span>
+                </div>
             </div>
         </div>
         <ul class="header__list wow fadeIn">
@@ -101,8 +104,8 @@
                 style="background-image: url('images/header/1.webp'), linear-gradient(#0A1B4C, #0A1B4C);">
                 <div class="header__content container">
                     <h2 class="header__title wow fadeInLeft" data-wow-delay="0.5s">
-                        Dbiz is
-                        <br>The software for
+                        <span>Dbiz is</span>
+                        The software for
                         Your business.
                     </h2>
                     <h3 class="header__subtitle wow fadeInRight" data-wow-delay="0.6s">
@@ -116,8 +119,8 @@
                 style="background-image: url('images/header/1.webp'), linear-gradient(#0A1B4C, #0A1B4C);">
                 <div class="header__content container">
                     <h2 class="header__title">
-                        Dbiz is
-                        <br>The software for
+                        <span>Dbiz is</span>
+                        The software for
                         Your business.
                     </h2>
                     <h3 class="header__subtitle">
@@ -131,8 +134,8 @@
                 style="background-image: url('images/header/1.webp'), linear-gradient(#0A1B4C, #0A1B4C);">
                 <div class="header__content container">
                     <h2 class="header__title">
-                        Dbiz is
-                        <br>The software for
+                        <span>Dbiz is</span>
+                        The software for
                         Your business.
                     </h2>
                     <h3 class="header__subtitle">
@@ -209,7 +212,7 @@
             </div>
         </section>
 
-        @@include('../lego/about.html')
+       @@include('../lego/about.html')
 
         <section class="study">
             <div class="container">
@@ -401,7 +404,7 @@
 
         @@include('../lego/team.html')
 
-        <section class="questions">
+        <!--  <section class="questions">
             <div class="container">
                 <h2 class="questions__title title wow fadeInUp" data-wow-offset="150">
                     <span class="questions__subtitle subtitle">The FAQs</span>
@@ -667,7 +670,7 @@
             </div>
         </section>
 
-        @@include('../lego/clietns.html')
+        @@include('../lego/clients.html')
 
         <section class="review">
             <div class="container">
@@ -738,10 +741,11 @@
             </div>
         </section>
 
-        @@include('../lego/call.html')
+        @@include('../lego/call.html') -->
+        <div class="overflow"></div>
     </main>
 
-    @@include('../lego/footer.html')
+    <!-- @@include('../lego/footer.html') -->
 
     <script src="js/main.min.js"></script>
 </body>

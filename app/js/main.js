@@ -2,6 +2,15 @@ $(function() {
 
     new WOW().init();
 
+    $('.header__burger, menu__link').on('click', function() {
+        if(window.innerWidth <= 768) {
+            $('.header__burger').toggleClass('header__burger--active');
+            $('.menu__list').toggleClass('menu__list--active');
+            $('.body').toggleClass('lock');
+            $('.overflow').toggleClass('overflow--active');
+        }
+    });
+
     $('.header__list').slick({
         arrows: false,
         dots: true,
