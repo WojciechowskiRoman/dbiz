@@ -1,10 +1,12 @@
 .about {
 
     padding: 80px 0 140px;
+    overflow: hidden;
 
     &__inner {
         display: flex;
         justify-content: space-between;
+        
     }
 
     &__img-box {
@@ -92,5 +94,48 @@
     &__link {
         width: 200px;
         height: 50px;
+        border: 1px solid transparent;
+        position: relative;
+        overflow: hidden;
+        transition: color 0.3s, border 0.3s, box-shadow 0.3s, border-radius 0.3s;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: #fff;
+            transform: scale(0);
+            transition: transform 0.4s;
+        }
+
+        span {
+            position: absolute;
+            z-index: 1;
+        }
+
+        &:hover {
+            span {
+                color: $accent;
+            }
+
+            border: 1px solid $accent;
+
+            &::before {
+                transform: scale(1);
+            }
+        }
+
+        &:active {
+            border: 1px solid #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px $accent;
+        }
+
+        &:focus {
+            box-shadow: 0 0 10px $accent;
+        }
     }
 }

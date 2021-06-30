@@ -26,37 +26,9 @@
     }
 
     &__item {
-        position: relative;
-        flex: 0 1 20%;
-        height: 500px;
-        background-blend-mode: luminosity;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        overflow: hidden;
 
         &:not(:last-child) {
             margin-right: 15px;
-        }
-
-        &--management {
-            background-image: url('../images/study/1.webp'), linear-gradient(#040E2A, #040E2A);
-        }
-
-        &--analytics {
-            background-image: url('../images/study/2.webp'), linear-gradient(#040E2A, #040E2A);
-        }
-
-        &--ux {
-            background-image: url('../images/study/3.webp'), linear-gradient(#040E2A, #040E2A);
-        }
-
-        &--business {
-            background-image: url('../images/study/4.webp'), linear-gradient(#040E2A, #040E2A);
-        }
-
-        &--design {
-            background-image: url('../images/study/5.webp'), linear-gradient(#040E2A, #040E2A);
         }
 
         &::after {
@@ -98,40 +70,5 @@
                 opacity: 1;
             }
         }
-    }
-
-    &__link {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        z-index: 1;
-    }
-
-    &__img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        
-    }
-
-    &__content {
-        padding: 0 69px 48px 42px;
-        position: absolute;
-        bottom: 0;
-        color: #fff;
-        z-index: 1;
-    }
-
-    &__name {
-        margin-bottom: 15px;
-        font-size: 16px;
-        font-weight: 500;
-    }
-
-    &__descr {
-        font-size: 24px;
-        font-weight: 700;
     }
 }

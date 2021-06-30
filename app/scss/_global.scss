@@ -22,6 +22,7 @@ main {
     justify-content: center;
     align-items: center;
     border: none;
+    outline: transparent;
     background-color: $accent;
     color: #fff;
     cursor: pointer;
@@ -57,6 +58,7 @@ main {
 }
 
 .more {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,8 +66,43 @@ main {
     height: 44px;
     text-align: center;
     border: 2px solid $accent;
+    outline: transparent;
     color: $accent;
     font-weight: 500;
+    transition: color 0.3s, box-shadow 0.3s, font-weight 0.3s;
+
+    span {
+        z-index: 1;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: $accent;
+        transition: width 0.3s;
+        z-index: 0;
+    }
+
+    &:hover {
+        color: #fff;
+
+        &::before {
+            width: 100%;
+        }
+    }
+
+    &:focus {
+        font-weight: 600;
+        box-shadow: 0 0 10px $accent;
+    }
+
+    &:active {
+        box-shadow: 0 0 10px $accent;
+    }
 }
 
 .social {
@@ -93,6 +130,21 @@ main {
         border: 2px solid rgba(#fff, 0.1);
         fill: #fff;
         transition: fill 0.3s;
+    }
+}
+
+.slick-dots {
+    
+    button {
+        font-size: 0;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+        border: 2px solid rgba(#F3F4F8, 0.3);
+        background-color: transparent;  
+        cursor: pointer;
+        transition: background-color 0.5s; 
     }
 }
 

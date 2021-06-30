@@ -1,0 +1,39 @@
+.course {
+
+    position: relative;
+    flex: 0 1 20%;
+    height: 500px;
+    background-blend-mode: luminosity;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+
+    &__link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+    }
+
+    &__content {
+        padding: 0 69px 48px 42px;
+        position: absolute;
+        bottom: 0;
+        color: #fff;
+        z-index: 1;
+    }
+
+    &__name {
+        margin-bottom: 15px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &__descr {
+        font-size: 24px;
+        font-weight: 700;
+    }
+}

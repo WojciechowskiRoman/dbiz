@@ -1,4 +1,7 @@
 $(function() {
+
+    new WOW().init();
+
     $('.header__list').slick({
         arrows: false,
         dots: true,

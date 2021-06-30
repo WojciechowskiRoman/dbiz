@@ -6,15 +6,20 @@
         padding: 13px 0 7px;
         display: flex;
         justify-content: space-between;
-        color: $grey;
-        
-    }
-
-    &__text {
+        color: $grey;     
     }
 
     &__info {
         color: #fff;
+        transition: color 0.3s;
+
+        &:hover {
+            color: $accent;
+        }
+
+        &:active {
+            color: #fff;
+        }
     }
 
     &__support {
@@ -25,23 +30,39 @@
         width: 100%;
     }
 
-    &__mail {
-        position: relative;
-        display: flex;
-        align-items: center;
+    &__link {
+        color: $grey;
+        fill: $grey;
+        transition: fill 0.3s, color 0.3s;
 
-        &::after {
-            content: '';
-            position: absolute;
-            right: -30px;
-            width: 1px;
-            height: 20px;
-            background-color: rgba(#F3F4F8, 0.2);       
+        &--mail {
+            position: relative;
+            display: flex;
+            align-items: center;
+    
+            &::after {
+                content: '';
+                position: absolute;
+                right: -30px;
+                width: 1px;
+                height: 20px;
+                background-color: rgba(#F3F4F8, 0.2);       
+            }
+        }
+
+        &:hover {
+            color: #fff;
+            fill: #fff;
+        }
+
+        &:active {
+            color: $accent;
+            fill: $accent;
         }
     }
 
     &__mail-icon {
-        margin-right: 10px;
+        margin-right: 10px; 
     }
 
     &__social {
@@ -51,16 +72,6 @@
     &__icon {
         &:not(:last-child) {
             margin-right: 13px;
-        }
-    }
-
-    &__link {
-        color: $grey;
-        fill: $grey;
-        transition: fill 0.3s;
-
-        &:hover {
-            fill: #fff;
         }
     }
 }

@@ -31,10 +31,39 @@
         border: 1px solid #e9eaf0;
         border-left: none;
         border-bottom: none;
+        animation-delay: calc(0.2s * var(--i));
 
         &:not(:first-child) {
             padding-left: 30px;
         }
+
+        &:hover {
+
+            .features__link {
+                background-color: $accent;
+                fill: #fff;
+            }
+
+            .features__name {
+                &::before {
+                    animation: top-bottom 1.3s infinite ease-in-out;
+                } 
+            }
+        }
+
+        @keyframes top-bottom {
+            0% {
+                top: -36px;
+            }
+
+            50% {
+                top: -50px;
+            }
+
+            100% {
+                top: -36px;
+            }
+        }     
     }
 
     &__name {
@@ -93,11 +122,16 @@
         height: 50px;
         border-radius: 50%;
         border: 2px solid #e9eaf0;   
-        transition: background-color 0.3s, fill 0.3s; 
-        
-        &:hover {
-            background-color: $accent;
-            fill: #fff;
+        outline: transparent;
+        transition: background-color 0.3s, fill 0.3s, border 0.3s, box-shadow 0.3s; 
+
+        &:active {
+            border: 2px solid $accent;
+            box-shadow: 0 0 10px $accent;
+        }
+
+        &:focus {
+            box-shadow: 0 0 10px $accent;
         }
     }
 }
