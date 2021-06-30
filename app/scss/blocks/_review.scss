@@ -103,6 +103,10 @@
         button {
             background-color: #fff;
             border: 2px solid #d3d5dc;
+
+            &:hover {
+                background-color: $accent;
+            }
         }
     }
 

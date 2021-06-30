@@ -24,6 +24,7 @@
     }
 
     &__link {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -32,5 +33,40 @@
         font-weight: 500;
         color: $main;
         background-color: #fff;
+        overflow: hidden;
+        outline: transparent;
+        transition: color 0.3s, box-shadow 0.3s, font-weight 0.3s;
+
+        span {
+            position: absolute;
+            z-index: 1;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: $accent;
+            transition: top 0.3s;
+        }
+
+        &:hover {
+            color: #fff;
+
+            &::before {
+                top: 0;
+            }
+        }
+
+        &:active {
+            font-weight: 600;
+        }
+
+        &:focus {
+            box-shadow: 0 0 10px #fff;
+        }
     }
 }

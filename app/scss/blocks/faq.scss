@@ -35,6 +35,11 @@
             background-color: $accent;
             color: #fff;
         }
+
+        &:hover {
+            background-color: $accent;
+            color: #fff;
+        }
     }
 
     &__answers {
@@ -91,6 +96,7 @@
         font-weight: 700;
         background-color: $athens;
         position: relative;
+        transition: background-color 0.3s, color 0.3s;
 
         &::before, &::after {
             position: absolute;
@@ -114,6 +120,11 @@
             height: 14px;
             opacity: 1;
             transition: opacity 0.3s;
+        }
+
+        &:hover {
+            background-color: #fff;
+            color: $accent;
         }
     }
 

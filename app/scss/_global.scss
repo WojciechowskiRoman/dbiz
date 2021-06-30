@@ -123,6 +123,14 @@ main {
                 fill: $accent;
             }
         }
+
+        &:active {
+            background-color: $accent;
+
+            .social__icon {
+                fill: #fff;
+            }
+        }
     }
 
     &__icon {

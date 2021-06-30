@@ -34,12 +34,22 @@
         font-size: 18px;
         font-weight: 600;
         color: $main;
+        outline: transparent;
         background-color: #fff;
-        transition: background-color 0.3s, color 0.3s;
+        transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 
         &--active {
             color: #fff;
             background-color: $accent;
+        }
+
+        &:hover {
+            color: #fff;
+            background-color: $accent;  
+        }
+
+        &:focus {
+            box-shadow: 0 0 10px $accent;
         }
     }
 
@@ -65,7 +75,6 @@
     }
 
     &__content {
-        // padding-top: 54px;
         padding-left: 70px;
         display: flex;
         flex-direction: column;
@@ -88,10 +97,6 @@
         margin-bottom: 53px;
         max-width: 401px;
         line-height: 1.5;
-    }
-
-    &__advantages {
-        // list-style-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4621/treehouse-marker.png);
     }
 
     &__plus {

@@ -2,6 +2,7 @@
 
     padding: 120px 0 124px;
     background-color: #040E2A;
+    overflow: hidden;
 
     &__top {
         margin-bottom: 65px;
@@ -26,6 +27,9 @@
     }
 
     &__item {
+
+        animation-delay: calc(0.2s * var(--k));
+        transition: box-shadow 0.3s;
 
         &:not(:last-child) {
             margin-right: 15px;
@@ -69,6 +73,10 @@
             &::before {
                 opacity: 1;
             }
+        }
+
+        &:active {
+            box-shadow: 0 0 10px #fff;
         }
     }
 }

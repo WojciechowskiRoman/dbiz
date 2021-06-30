@@ -23,6 +23,7 @@
         background-color: #040E2A;
         overflow: hidden;
         transition: background-color 0.5s;
+        animation-delay: calc(0.1s * var(--i));
 
         &::after {
             position: absolute;
