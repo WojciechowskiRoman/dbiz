@@ -1,7 +1,46 @@
 .header {
 
     z-index: 50;
-    background-color: #fff;
+    background-color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-blend-mode: multiply;
+
+    &--main {
+        background-color: #fff;
+
+        .header__input {
+            color: $main;
+        }
+
+        .menu__link {
+            color: $main;
+        }
+
+        .header__search-icon {
+            color: $main;
+        }
+
+        .header__burger-btn {
+            background-color: #000;
+
+            &::before,
+            &::after {
+                background-color: #000;
+            }
+        }
+
+        .menu__list {
+            @media(max-width: $medium) {
+                top: 157px;
+            }
+        } 
+    }
+
+    &__top {
+        border-bottom: 1px solid rgba(#fff, 0.1);
+    }
 
     &__inner {
         padding: 11px 0 13px;
@@ -39,7 +78,7 @@
 
     &__search-icon {
         margin-right: 9px;
-        fill: $main;
+        fill: #fff;
         transition: fill 0.3s;
     }
 
@@ -48,7 +87,9 @@
         padding: 0;
         width: 54px;
         height: 100%;
+        color: #fff;
         outline: transparent;
+        background-color: transparent;
         border: none;
         cursor: pointer;
         transition: width 0.3s;
@@ -84,7 +125,7 @@
         @media(max-width: $tablet) {
             width: 100px;
         }
-        
+
         span {
             position: absolute;
             z-index: 1;
@@ -102,7 +143,8 @@
             }
         }
 
-        &::before, &:after {
+        &::before,
+        &:after {
             content: '';
             position: absolute;
             top: 0;
@@ -135,14 +177,15 @@
                 }
             }
 
-            &::before, &:after {
+            &::before,
+            &:after {
                 width: 50%;
             }
         }
 
         &:active {
-           font-weight: 600;
-           box-shadow: 0 0 10px $accent;
+            font-weight: 600;
+            box-shadow: 0 0 10px $accent;
         }
 
         &:focus {
@@ -193,7 +236,7 @@
         }
     }
 
-    &__title { 
+    &__title {
         margin-bottom: 20px;
         display: flex;
         flex-direction: column;
@@ -217,7 +260,7 @@
             font-size: 40px;
         }
     }
-    
+
     &__subtitle {
         margin-bottom: 50px;
         max-width: 535px;
@@ -285,7 +328,7 @@
 
         &--active {
             .header__burger-btn {
-                background-color:  transparent;
+                background-color: transparent;
                 transform: translateX(-50px);
 
                 &::before {
@@ -308,17 +351,18 @@
         display: block;
         width: 40px;
         height: 4px;
-        background-color: #000;
+        background-color: #fff;
         border-radius: 10px;
         transition: transform 0.5s ease-in-out, background-color 0.5s;
 
-        &::before, &::after {
+        &::before,
+        &::after {
             position: absolute;
             content: '';
             width: 100%;
             height: 100%;
             border-radius: 10px;
-            background-color: #000;
+            background-color: #fff;
             transition: transform 0.5s ease-in-out;
         }
 
@@ -332,14 +376,14 @@
     }
 
     .slick-dots {
-    
+
         display: flex;
         position: absolute;
         bottom: 50px;
         left: 50%;
         transform: translateX(-50%);
 
-        @media(max-width: $small-phone) {      
+        @media(max-width: $small-phone) {
             bottom: 18px;
         }
 
@@ -351,9 +395,9 @@
             }
         }
     }
-    
+
     .slick-active {
-        
+
         button {
             background-color: #fff;
         }
@@ -368,7 +412,7 @@
         @media(max-width: $medium) {
             padding: 20px 0;
             position: absolute;
-            top: 157px;
+            top: 80px;
             left: 0;
             right: 0;
             display: block;
@@ -381,6 +425,10 @@
 
             &--active {
                 transform: translateY(0);
+
+                .menu__link {
+                    color: #000;
+                }
             }
         }
     }
@@ -404,10 +452,11 @@
     &__link {
         position: relative;
         font-weight: 500;
-        color: $main;
+        color: #fff;
         transition: color 0.3s;
 
-        &::before, &::after {
+        &::before,
+        &::after {
             position: absolute;
             content: '';
             bottom: -10px;
@@ -436,13 +485,16 @@
         &:hover {
             color: $accent;
 
-            &::before, &::after {
+            &::before,
+            &::after {
                 width: 50%;
             }
         }
 
         &:active {
-            &::before, &::after {
+
+            &::before,
+            &::after {
                 background-color: $grey;
             }
         }
