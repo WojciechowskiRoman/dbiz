@@ -1,6 +1,15 @@
 $(function() {
 
-    new WOW().init();
+    wow = new WOW({
+        boxClass:     'wow',      
+        animateClass: 'animated', 
+        offset:       0,          
+        mobile:       false,       
+        live:         true   
+      }
+    );
+
+    wow.init();
 
     $('.header__burger, menu__link').on('click', function() {
         if(window.innerWidth <= 768) {
