@@ -39,6 +39,12 @@ main {
     &__footer {
         margin-bottom: 15px;
         display: block;
+
+        .logo__img {
+            @media(max-width: $tablet) {
+                margin: 0 auto;
+            }
+        }
     }
 }
 

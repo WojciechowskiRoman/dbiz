@@ -12,6 +12,19 @@
         justify-content: space-between;
         height: 420px;
         z-index: 1;
+
+        @media(max-width: $tablet) {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @media(max-width: $medium) {
+            height: 370px;
+        }
+
+        @media(max-width: $small-phone) {
+            height: 320px;
+        }
     }
 
     &__title {
@@ -21,6 +34,21 @@
         font-weight: 700;
         color: #fff;
         letter-spacing: -1.5px;
+
+        @media(max-width: $tablet) {
+            margin-bottom: 30px;
+            font-size: 55px;
+            text-align: center;
+        }
+
+        @media(max-width: $medium) {
+            font-size: 50px;
+        }
+
+        @media(max-width: $medium) {
+            font-size: 30px;
+            line-height: 1.2;
+        }
     }
 
     &__link {
@@ -67,6 +95,16 @@
 
         &:focus {
             box-shadow: 0 0 10px #fff;
+        }
+
+        @media(max-width: $tablet) {
+            width: 187px;
+            height: 53px;
+        }
+
+        @media(max-width: $small-phone) {
+            width: 168px;
+            height: 43px;
         }
     }
 }

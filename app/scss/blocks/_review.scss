@@ -2,6 +2,18 @@
 
     padding-bottom: 115px;
 
+    @media(max-width: $tablet) {
+        padding-bottom: 100px;
+    }
+
+    @media(max-width: $medium) {
+        padding-bottom: 80px;
+    }
+
+    @media(max-width: $small-phone) {
+        padding-bottom: 70px;
+    }
+
     &__title {
         margin: 0 auto 59px;
         text-align: center;

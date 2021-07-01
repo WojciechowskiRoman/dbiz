@@ -60,9 +60,32 @@
 
     &__item {
         margin-bottom: 11px;
+        position: relative;
         cursor: pointer;
+        counter-increment: inst;
+
+        &::before {
+            content: counter(inst)'.';
+            position: absolute;
+            color: $main;
+            top: 29px;
+            left: 28px;
+            transform: translateY(-50%);
+            font-size: 18px;
+            font-weight: 700;
+            z-index: 1;
+            transition: color 0.3s;
+
+            @media(max-width: $medium) {
+                left: 14px;
+            }
+        }
 
         &--active {
+
+            &::before {
+                color: $accent;
+            }
             
             .accordion__title {
                 color: $accent;
@@ -86,10 +109,26 @@
                 box-shadow: 0px 30px 60px 0px rgba(13, 30, 80, 0.1);   
             }
         }
+
+        &:hover {
+
+            &::before {
+                color: $accent;
+            }
+
+            .accordion__title {
+                background-color: #fff;
+                color: $accent;
+
+                &::before, &:after {
+                    background-color: $accent;
+                }
+            }
+        }
     }
 
     &__title {
-        padding: 20px 20px 20px 29px;
+        padding: 20px 20px 20px 42px;
         display: flex;
         align-items: center;
         font-size: 18px;
@@ -103,7 +142,6 @@
             content: '';
             background-color: $main;
             right: 0;
-            top: 50%;
             transition: background-color 0.3s, opacity 0.3s;
         }
 
@@ -115,16 +153,10 @@
 
         &::after {
             right: 35px;
-            top: 40%;
             width: 2px;
             height: 14px;
             opacity: 1;
             transition: opacity 0.3s;
-        }
-
-        &:hover {
-            background-color: #fff;
-            color: $accent;
         }
     }
 
