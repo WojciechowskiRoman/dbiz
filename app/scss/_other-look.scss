@@ -1,0 +1,49 @@
+.other-look {
+    .about {
+        padding: 120px 0;
+
+        @media(max-width: $tablet) {
+            padding: 80px 0;
+        }
+
+        @media(max-width: $medium) {
+            padding: 70px 0;
+        }
+
+        @media(max-width: $small-phone) {
+            padding: 60px 0;
+        }
+    }
+
+    .study {
+        padding: 39px 0 129px;
+        background-color: #fff;
+
+        @media(max-width: $tablet) {
+            padding: 39px 0 100px;
+        }
+
+        @media(max-width: $medium) {
+            padding: 39px 0 80px;
+        }
+
+        @media(max-width: $small-phone) {
+            padding: 39px 0 60px;
+        }
+    
+        &__top {
+            margin-bottom: 56px;
+            justify-content: center;
+            text-align: center;
+        }
+    
+        &__title {
+            color: $main;
+        }
+    
+        &__item {
+            flex: 0 1 auto;
+            width: 370px;
+        }
+    }
+}

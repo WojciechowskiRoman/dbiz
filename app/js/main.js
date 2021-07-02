@@ -87,4 +87,11 @@ $(function() {
             }
         });
     }
+
+    $(".project__rating").rateYo({
+        starWidth: "15px",
+        readOnly: true,
+        spacing: "4px",
+      });
+
 });
