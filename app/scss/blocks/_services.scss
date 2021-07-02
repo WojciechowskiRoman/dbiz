@@ -1,0 +1,236 @@
+.services {
+
+    padding: 20px 0 135px;
+
+    @media(max-width: $tablet) {
+        padding: 20px 0 100px;
+    }
+
+    @media(max-width: $medium) {
+        padding: 20px 0 80px;
+    }
+
+    @media(max-width: $small-phone) {
+        padding: 20px 0 60px;
+    }
+
+    &__title {
+        margin: 0 auto 65px;
+        align-items: center;
+        max-width: 550px;
+        text-align: center;
+
+        @media(max-width: $medium) {
+            margin: 0 auto 45px;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 20px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+
+        @media(max-width: $tablet) {
+            justify-content: space-between;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-end;
+        border: 1px solid #E7E9EF;
+        border-bottom: none;
+        height: 265px;
+        flex: 0 1 25%;
+        animation-delay: calc(0.1s * var(--i));
+
+
+        &:nth-child(-n+4) {
+            border-top: none;
+
+            @media(max-width: $tablet) {
+                border-top: 1px solid #E7E9EF;
+            }
+        }
+
+        &:nth-child(1), &:nth-child(5) {
+            border-left: none;
+
+            @media(max-width: $tablet) {
+                border-left: 1px solid #E7E9EF;
+            }
+        }
+
+        &:hover {
+            .services__content {
+                border-top: 3px solid $accent;
+                border-left: 1px solid $accent;
+                border-right: 1px solid $accent;
+                box-shadow: 0px -3px 0px 0px rgba(248, 78, 119, 0.004),0px 30px 40px 0px rgba(13, 30, 80, 0.1);               
+            }
+
+            .services__more {
+                color: $accent;
+                fill: $accent;
+
+                &:active {
+                    color: $green;
+                }
+            }
+        }
+
+        @media(max-width: $large) {
+            height: 273px;
+        }
+
+        @media(max-width: $tablet) {
+            flex: 0 1 33.333%;
+            border: 1px solid #E7E9EF;
+        }
+
+        @media(max-width: $medium) {
+            justify-content: center;
+            flex: 0 1 50%;
+        }
+
+        @media(max-width: $small-phone) {
+            flex: 0 1 100%;
+        }
+    }
+
+    &__content {
+        margin: 0 15px 32px 15px;
+        padding: 0 15px 6px 15px;
+        border-top: 3px solid transparent;
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
+        display: flex;
+        justify-content: flex-end;
+        height: 88%;
+        flex-direction: column;
+        transition: border 0.3s, box-shadow 0.3s;
+
+        @media(max-width: $large) {
+            margin: 0 8px 19px 8px;
+        }
+
+        @media(max-width: $medium) {
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    &__name {
+        margin-bottom: 15px;
+        position: relative;
+        font-size: 20px;
+        font-weight: 700;
+
+        &::before {
+            position: absolute;
+            content: '';
+            transform: translateY(-100%);
+            top: -27px;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            @media(max-width: $medium) {
+                left: 50%;
+                transform: translate(-50%, -100%);
+            }
+        }
+
+        &--web {
+            &::before {
+                background-image: url('../images/services/design.png');
+                width: 50px;
+                height: 44px;
+            }
+        }
+
+        &--analytics {
+            &::before {
+                background-image: url('../images/services/analytics.png');
+                width: 44px;
+                height: 44px;
+            }
+        }
+
+        &--team {
+            &::before {
+                background-image: url('../images/services/team.png');
+                width: 56px;
+                height: 36px;
+            }
+        }
+
+        &--financial {
+            &::before {
+                background-image: url('../images/services/audit.png');
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        &--tax {
+            &::before {
+                background-image: url('../images/services/tax.png');
+                width: 39px;
+                height: 50px;
+            }
+        }
+
+        &--global {
+            &::before {
+                background-image: url('../images/services/global.png');
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        &--innovative {
+            &::before {
+                background-image: url('../images/services/innovative.png');
+                width: 50px;
+                height: 60px;
+            }
+        }
+
+        &--support {
+            &::before {
+                background-image: url('../images/services/support.png');
+                width: 46px;
+                height: 53px;
+            }
+        }
+    }
+
+    &__text {
+        margin-bottom: 14px;
+        display: block;
+    }
+
+    &__more {
+        padding: 14px 0;
+        display: block;
+        font-size: 15px;
+        font-weight: 500;
+        color: $main;
+        transition: color 0.3s, fill 0.3s;
+
+        &:hover {
+            .features__icon {
+                margin-left: 20px;
+            }
+        }
+
+        &:active {
+            .features__icon {
+                fill: $green;
+            }
+        }
+    }
+}
