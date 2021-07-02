@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dbiz</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="body">
+
+    <h1 class="sr-only">Dbiz</h1>
+
+    <header class="header" style="background-image: url('images/services/bg.webp'), linear-gradient(#3b4a73, #3b4a73);">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__inner">
+
+                    <nav class="header__menu menu">
+                        <a class="logo" href="index.html">
+                            <img class="logo__img" src="images/logo-dark.svg" alt="logo">
+                        </a>
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a class="menu__link" href="index.html">Home</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="services.html">Services</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Pages</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Blog</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <form class="header__form" action="#">
+                        <svg class="header__search-icon" viewBox="0 0 17 17" width="17" height="17">
+                            <use xlink:href="images/sprite.svg#search"></use>
+                        </svg>
+                        <input class="header__input" type="text" placeholder="Search...">
+                        <button class="header__button button" type="submit">
+                            <span>Lets' talk</span>
+                            <span>Lets' talk</span>
+                        </button>
+                    </form>
+                    <div class="header__burger">
+                        <span class="header__burger-btn"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <div class="container">
+                <h2 class="page__title wow fadeInDown">Portfolio</h2>
+                <ul class="breadcrumbs wow fadeInUp">
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="index.html">Home</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">Portfolio</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="portfolio">
+            <div class="container">
+                <ul class="portfolio__filter wow fadeInLeft">
+                    <li class="portfolio__filter-item">
+                        <button class="portfolio__button portfolio__button--active" type="submit" data-filter="all">
+                            See All
+                        </button>
+                    </li>
+                    <li class="portfolio__filter-item">
+                        <button class="portfolio__button" type="submit" data-filter="design">
+                            Web Design
+                        </button>
+                    </li>
+                    <li class="portfolio__filter-item">
+                        <button class="portfolio__button" type="submit"
+                            data-filter="software">
+                            Software
+                        </button>
+                    </li>
+                    <li class="portfolio__filter-item">
+                        <button class="portfolio__button" type="submit"
+                            data-filter="solution">
+                            IT Solution
+                        </button>
+                    </li>
+                    <li class="portfolio__filter-item">
+                        <button class="portfolio__button" type="submit" data-filter="style">
+                            Style Guide
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="portfolio__list wow fadeInUpBig">
+                    <article class="course"
+                        style="background-image: url('images/study/1.webp'), linear-gradient(#040E2A, #040E2A); --k:1;" data-item="style">
+                        <a class="course__link" href="#">
+                            <div class="course__content">
+                                <h3 class="course__name">Management</h3>
+                                <span class="course__descr">
+                                    Exceptional Execution
+                                    for Business
+                                </span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="course"
+                        style="background-image: url('images/study/2.webp'), linear-gradient(#040E2A, #040E2A); --k:2;" data-item="solution">
+                        <a class="course__link" href="#">
+                            <div class="course__content">
+                                <h3 class="course__name">Analytics</h3>
+                                <span class="course__descr">
+                                    Business Insight and
+                                    Analytics
+                                </span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="course"
+                        style="background-image: url('images/study/3.webp'), linear-gradient(#040E2A, #040E2A); --k:3;" data-item="style">
+                        <a class="course__link" href="#">
+                            <div class="course__content">
+                                <h3 class="course__name">UX Leadership</h3>
+                                <span class="course__descr">
+                                    Dbiz Template for
+                                    Startup's and beyond
+                                </span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="course"
+                        style="background-image: url('images/study/4.webp'), linear-gradient(#040E2A, #040E2A); --k:4;" data-item="solutions">
+                        <a class="course__link" href="#">
+                            <div class="course__content">
+                                <h3 class="course__name">Business Strategy</h3>
+                                <span class="course__descr">
+                                    Tips for Maintaining a
+                                    Positive Attitude
+                                </span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="course"
+                        style="background-image: url('images/study/5.webp'), linear-gradient(#040E2A, #040E2A); --k:5;" data-item="design">
+                        <a class="course__link" href="#">
+                            <div class="course__content">
+                                <h3 class="course__name">Design Phase</h3>
+                                <span class="course__descr">
+                                    Initial Concept and
+                                    Design Phase
+                                </span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="course"
+                        style="background-image: url('images/study/1.webp'), linear-gradient(#040E2A, #040E2A); --k:1;" data-item="software">
+                        <a class="course__link" href="#">
+                            <div class="course__content">
+                                <h3 class="course__name">Management</h3>
+                                <span class="course__descr">
+                                    Exceptional Execution
+                                    for Business
+                                </span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="course"
+                        style="background-image: url('images/study/2.webp'), linear-gradient(#040E2A, #040E2A); --k:2;" data-item="software">
+                        <a class="course__link" href="#">
+                            <div class="course__content">
+                                <h3 class="course__name">Analytics</h3>
+                                <span class="course__descr">
+                                    Business Insight and
+                                    Analytics
+                                </span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="course"
+                        style="background-image: url('images/study/3.webp'), linear-gradient(#040E2A, #040E2A); --k:3;" data-item="solutions">
+                        <a class="course__link" href="#">
+                            <div class="course__content">
+                                <h3 class="course__name">UX Leadership</h3>
+                                <span class="course__descr">
+                                    Dbiz Template for
+                                    Startup's and beyond
+                                </span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="course"
+                        style="background-image: url('images/study/4.webp'), linear-gradient(#040E2A, #040E2A); --k:4;" data-item="solutions">
+                        <a class="course__link" href="#">
+                            <div class="course__content">
+                                <h3 class="course__name">Business Strategy</h3>
+                                <span class="course__descr">
+                                    Tips for Maintaining a
+                                    Positive Attitude
+                                </span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        @@include('../lego/call.html')
+
+        <div class="overflow"></div>
+    </main>
+
+    @@include('../lego/footer.html')
+
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

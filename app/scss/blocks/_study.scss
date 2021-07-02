@@ -69,46 +69,6 @@
             margin-right: 15px;
         }
 
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 1;
-            background-image: url('../images/study/overlay.svg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            transition: opacity 0.5s;
-        }
-
-        &::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: -32px;
-            width: 100%;
-            height: 189px;
-            background-image: url('../images/study/hover.svg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            opacity: 0;
-            transition: opacity 0.5s;
-        }
-
-        &:hover {
-            background-blend-mode: normal;
-
-            &::after {
-                opacity: 0;
-            }
-
-            &::before {
-                opacity: 1;
-            }
-        }
-
         &:active {
             box-shadow: 0 0 10px #fff;
         }
