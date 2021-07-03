@@ -94,4 +94,8 @@ $(function() {
         spacing: "4px",
       });
 
+    $('.blog__pagination-item').on('click', function() {
+        $('.blog__pagination-item').removeClass('blog__pagination-item--active');
+        $(this).toggleClass('blog__pagination-item--active');
+    });
 });
