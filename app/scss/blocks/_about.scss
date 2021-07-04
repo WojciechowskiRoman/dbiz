@@ -130,6 +130,8 @@
 
     &__title {
         margin-bottom: 25px;
+        @extend %limit;
+        -webkit-line-clamp: 3;
     }
 
     &__subtitle {

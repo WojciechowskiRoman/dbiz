@@ -16,6 +16,9 @@
 
     &__search {
         margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        height: 60px;
     }
 
     &__form {
@@ -49,11 +52,10 @@
     &__label {
 
         &--search {
-            display: flex;
-            justify-content: space-between;
-            height: 60px;
+            width: 100%;
             border: 1px solid #11ABA0;
             border-left: 3px solid #11ABA0;
+            border-right: none;
 
             .aside__input {
                 width: 100%;
@@ -69,14 +71,23 @@
         padding: 15px 10px;
         outline: transparent;
         border: none;
+
+        @media(max-width: $small-phone) {
+            padding: 8px 10px;
+        }
     }
 
     &__button {
         padding-right: 25px;
+        border: 1px solid #11ABA0;
+        border-left: none;
         width: 58px;
         background-color: transparent;
-        border: none;
         cursor: pointer;
+
+        @media(max-width: $small-phone) {
+            height: 45px;
+        }
     }
 
     &__icon {

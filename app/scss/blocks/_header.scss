@@ -244,6 +244,8 @@
         font-weight: 700;
         font-size: 80px;
         letter-spacing: -2px;
+        @extend %limit;
+        -webkit-line-clamp: 3;
 
         @media(max-width: $tablet) {
             max-width: 551px;
