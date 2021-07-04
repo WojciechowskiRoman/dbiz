@@ -1,0 +1,84 @@
+.form {
+
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        margin-bottom: 17px;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+
+        @media(max-width: $medium) {
+            margin: 0 auto 17px;
+        }
+    }
+
+    &__top {
+        margin-bottom: 20px;
+        display: flex;
+
+        @media(max-width: $medium) {
+            flex-direction: column;
+        }
+    }
+
+    &__comment-label {
+        max-width: 370px;
+        width: 100%;
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+
+        @media(max-width: $medium) {
+            max-width: 100%;
+
+            &:not(:last-child) {
+                margin: 0 0 20px 0;
+            }
+        }
+    }
+
+    &__comment-input {
+        padding: 11px 24px;
+        width: 100%;
+        border: transparent;
+        outline-color: transparent;
+        border: 2px solid transparent;
+        background-color: #F0F1F5;
+        color: #7B7D82;
+        font-size: 16px;
+        transition: box-shadow 0.3s, border 0.3s;
+
+        &--textarea {
+            margin-bottom: 17px;
+            padding: 19px 25px;
+            min-height: 180px;
+            resize: none;
+        }
+
+        &:hover {
+            border: 2px solid $accent;
+        }
+
+        &:focus {
+            box-shadow: 0 0 10px $accent;
+        }
+    }
+
+    &__comment-checkbox {
+        margin-bottom: 28px;
+    }
+
+    &__button {
+        padding: 20px 29px;
+        max-width: 180px;
+
+        @media(max-width: $medium) {
+            padding: 18px 14px;
+            max-width: 150px;
+            margin: 0 auto;
+        }
+    }
+}

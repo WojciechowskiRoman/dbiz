@@ -30,6 +30,7 @@ main {
 
 .container {
     max-width: 1200px;
+    width: 100%;
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -159,78 +160,6 @@ main {
         border: 2px solid rgba(#fff, 0.1);
         fill: #fff;
         transition: fill 0.3s;
-    }
-}
-
-.page {
-
-    min-height: 368px;
-    display: flex;
-    align-items: center;
-
-    @media(max-width: $tablet) {
-        min-height: 300px;
-    }
-
-    @media(max-width: $medium) {
-        min-height: 200px;
-    }
-
-    @media(max-width: $small-phone) {
-        min-height: 140px;
-    }
-
-    &--project {
-        min-height: 420px;
-
-        @media(max-width: $small-phone) {
-            min-height: 200px;
-        }
-
-        .page__title {
-            @media(max-width: $medium) {
-                font-size: 40px;
-            }
-
-            @media(max-width: $small-phone) {
-                font-size: 35px;
-            }
-        }
-
-        .page__subtitle {
-            @media(max-width: $medium) {
-                margin-bottom: 20px;
-            }
-        }
-    }
-
-    &__title {
-        margin-bottom: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-        max-width: 600px;
-        font-size: 60px;
-        font-weight: 700;
-        color: #fff;
-
-        @media(max-width: $medium) {
-            font-size: 50px;
-        }
-
-        @media(max-width: $small-phone) {
-            font-size: 40px;
-        }
-    }
-
-    &__subtitle {
-        margin-bottom: 30px;
-        padding: 9px 17px;
-        font-size: 15px;
-        font-weight: 500;
-        background-color: #11ABA1;
     }
 }
 
