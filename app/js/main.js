@@ -98,4 +98,18 @@ $(function() {
         $('.blog__pagination-item').removeClass('blog__pagination-item--active');
         $(this).toggleClass('blog__pagination-item--active');
     });
+
+    $(window).on('scroll', function() {
+        if ($(this).scrollTop()> 400) {
+            $('.up').fadeIn();
+        } else {
+            $('.up').fadeOut();
+        }
+    });
+
+    $("a[href^='.']").on('click', function(){
+        var _href = $(this).attr("href");
+        $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, 700);
+        return false;
+    });
 });
