@@ -1,0 +1,30 @@
+.questions {
+
+    padding-bottom: 131px;
+
+    @media(max-width: $tablet) {
+        padding-bottom: 100px;
+    }
+
+    @media(max-width: $medium) {
+        padding-bottom: 90px;
+    }
+
+    @media(max-width: $small-phone) {
+        padding-bottom: 70px;
+    }
+
+    &__title {
+        margin: 0 auto 62px;
+        text-align: center;
+        max-width: 376px;
+
+        @media(max-width: $medium) {
+            margin: 0 auto 50px;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 25px;
+    }
+}
