@@ -59,8 +59,8 @@ $(function() {
         $('.faq__link').removeClass('faq__link--active');
         $(this).addClass('faq__link--active');
 
-        $('.faq__item').fadeIn().css('display', 'none');
-        $($(this).attr('href')).fadeIn().css('display', 'flex');
+        $('.faq__item').css('display', 'none');
+        $($(this).attr('href')).css('display', 'flex');
     });
 
     let list = document.querySelectorAll('.portfolio__button');
